@@ -22,10 +22,10 @@ def main():
 
         # プレイヤー１が何を出すか決める
         random_num = random.randint(0, 2)
-        if random_num < 1:
+        if random_num == 0:
             player1_hand = STONE
             print("グー", end="")
-        elif random_num < 2:
+        elif random_num == 1:
             player1_hand = SCISSORS
             print("チョキ", end="")
         else:
@@ -36,10 +36,10 @@ def main():
 
         # プレイヤー２が何を出すか決める
         random_num = random.randint(0, 2)
-        if random_num < 1:
+        if random_num == 0:
             player2_hand = STONE
             print("グー")
-        elif random_num < 2:
+        elif random_num == 1:
             player2_hand = SCISSORS
             print("チョキ")
         else:
