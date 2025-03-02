@@ -6,10 +6,10 @@ SCISSORS = 1  # チョキ
 PAPER = 2  # パー
 
 def main():
-    # プレイヤー１の勝ち数
+    # 村田さんの勝ち数
     player1_win_count = 0
 
-    # プレイヤー２の勝ち数
+    # 山田さんの勝ち数
     player2_win_count = 0
 
     # プログラム開始メッセージを表示する
@@ -20,7 +20,7 @@ def main():
         # 何回戦目かを表示する
         print(f"【{cnt + 1}回戦目】")
 
-        # プレイヤー１が何を出すか決める
+        # 村田さんが何を出すか決める
         random_num = random.randint(0, 2)
         if random_num == 0:
             player1_hand = STONE
@@ -34,7 +34,7 @@ def main():
 
         print(" vs. ", end="")
 
-        # プレイヤー２が何を出すか決める
+        # 山田さんが何を出すか決める
         random_num = random.randint(0, 2)
         if random_num == 0:
             player2_hand = STONE
@@ -50,12 +50,12 @@ def main():
         if (player1_hand == STONE and player2_hand == SCISSORS) or \
            (player1_hand == SCISSORS and player2_hand == PAPER) or \
            (player1_hand == PAPER and player2_hand == STONE):
-            print("\nプレイヤー１が勝ちました！\n")
+            print("\n村田さんが勝ちました！\n")
             player1_win_count += 1
         elif (player1_hand == STONE and player2_hand == PAPER) or \
              (player1_hand == SCISSORS and player2_hand == STONE) or \
              (player1_hand == PAPER and player2_hand == SCISSORS):
-            print("\nプレイヤー２が勝ちました！\n")
+            print("\n山田さんが勝ちました！\n")
             player2_win_count += 1
         else:
             print("\n引き分けです！\n")
@@ -63,9 +63,9 @@ def main():
     # 最終的な勝者を判定し、画面に表示する
     print("【ジャンケン終了】\n")
     if player1_win_count > player2_win_count:
-        print(f"{player1_win_count}対{player2_win_count}でプレイヤー１の勝ちです！\n")
+        print(f"{player1_win_count}対{player2_win_count}で村田さんの勝ちです！\n")
     elif player1_win_count < player2_win_count:
-        print(f"{player1_win_count}対{player2_win_count}でプレイヤー２の勝ちです！\n")
+        print(f"{player1_win_count}対{player2_win_count}で山田さんの勝ちです！\n")
     else:
         print(f"{player1_win_count}対{player2_win_count}で引き分けです！\n")
 
